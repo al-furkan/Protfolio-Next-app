@@ -1,8 +1,10 @@
-/** @type {import('next').NextConfig} */
-const nextConfig = {
-    images: {
-        domains: ['www.google.com', 'images.pexels.com'],
-    },
-};
+const isProd = process.env.NODE_ENV === 'production';
+const repoName = 'Protfolio-Next-app'; // Update with your GitHub repository name
 
-export default nextConfig;
+module.exports = {
+  assetPrefix: isProd ? `/${Protfolio-Next-app}/` : '',
+  images: {
+    unoptimized: true,
+  },
+  output: 'export',
+};
